@@ -1,0 +1,7 @@
+config:
+  filter:
+    pupils:
+      path: pupils.txt
+  google:
+    credentials:
+      path: google-sheets-client-secret.json

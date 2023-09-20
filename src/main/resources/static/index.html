@@ -3,20 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>Google Spreadsheet</title>
+    <script src="scripts/spreadsheets.js"></script>
 </head>
 
 <body>
-     <form action="/spreadsheet/copy" method="post">
-         <label for="sourceSpreadSheetId">Source Spreadsheet Id</label>
-         <input type="text" name="sourceSpreadSheetId" value="1hzWtZXPyU8uuYJ88C2LMmmb9clJ_nrm1p05HI0wiBIM"/>
+     <div>
+         <label>Source Spreadsheet Id</label>
+         <input type="text" id="sourceSpreadSheetId" class="source-spread-sheet-id" value="1hzWtZXPyU8uuYJ88C2LMmmb9clJ_nrm1p05HI0wiBIM" maxlength="200"/>
          <br/>
-         <label for="resultSpreadSheetId">Result Spreadsheet Id</label>
-         <input type="text" name="resultSpreadSheetId" value="12tSk8Q62BVWWvIUNHadWf-zefrVWU8EQ88gy0axdFP8"/>
+         <label>Result Spreadsheet Id</label>
+         <input type="text" id="resultSpreadSheetId" class="result-spread-sheet-id" value="12tSk8Q62BVWWvIUNHadWf-zefrVWU8EQ88gy0axdFP8" maxlength="200"/>
          <br/>
-         <label for="range">Range</label>
-         <input type="text" name="range" value="A1:H360"/>
+         <label>Range</label>
+         <input type="text" id="range" class="range" value="A1:H360"/>
          <br/>
-         <input type="submit" value="Copy Spreadsheet" />
-    </form>
+         <input type="button" value="Copy Spreadsheet" onclick="copySpreadSheet()"/>
+    </div>
+    <div id="resultData">
+
+    </div>
 </body>
 </html>
